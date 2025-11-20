@@ -1,5 +1,10 @@
 package com.fudala;
 
+import com.fudala.math.LibrarySinCalculator;
+import com.fudala.math.RectangleSinCalculatorWithBug;
+import com.fudala.math.TaylorSinCalculator;
+import com.fudala.math.TrigFunctionCalculator;
+import com.fudala.voting.MajorityVotingSinCalculator;
 import org.junit.Test;
 
 import java.util.List;
