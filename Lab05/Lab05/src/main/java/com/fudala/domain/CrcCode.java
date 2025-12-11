@@ -5,9 +5,14 @@ import java.util.Objects;
 public final class CrcCode implements ErrorControlCode {
 
     private static final String BINARY_PATTERN = "[01]+";
+    private static final String DEFAULT_POLYNOMIAL = "100000111";
 
     private final String polynomial;
     private final int degree;
+
+    public CrcCode() {
+        this(DEFAULT_POLYNOMIAL);
+    }
 
     public CrcCode(String polynomial) {
         this.polynomial = validatePolynomial(polynomial);
@@ -16,7 +21,7 @@ public final class CrcCode implements ErrorControlCode {
 
     @Override
     public String name() {
-        return "CRC-" + degree + "[" + polynomial + "]";
+        return "CRC-8[" + polynomial + "]";
     }
 
     @Override
